@@ -24,6 +24,11 @@ describe('AdaCat', function() {
       var myCat = new AdaCat('greg', 'alex')
       expect(myCat.hunger).to.equal(5)
     })
+
+    it('sets the isSleeping attribute to false', function() {
+      var myCat = new AdaCat('denim', 'alex')
+      expect(myCat.isSleeping).to.equal(false)
+    })
   })
 
   describe('#getDescription', function() {
@@ -54,6 +59,23 @@ describe('AdaCat', function() {
       myCat.hunger = 0
       myCat.feed()
       expect(myCat.hunger).to.equal(0)
+    })
+  })
+
+  describe('#nap', function() {
+    it('sets the isSleeping attribute to true', function() {
+      var myCat = new AdaCat('apple', 'alex')
+      myCat.nap()
+      expect(myCat.isSleeping).to.equal(true)
+    })
+  })
+
+  describe('#wakeUp', function() {
+    it('sets the isSleeping attribute to false', function() {
+      var myCat = new AdaCat('brick', 'alex')
+      myCat.isSleeping = true
+      myCat.wakeUp()
+      expect(myCat.isSleeping).to.equal(false)
     })
   })
 })

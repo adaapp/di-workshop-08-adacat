@@ -3,6 +3,7 @@ class AdaCat {
     this.name = name
     this.owner = owner
     this.hunger = 5
+    this.isSleeping = false
   }
 
   getDescription() {
@@ -20,6 +21,14 @@ class AdaCat {
       hunger = 0
     }
     this.hunger = hunger
+  }
+
+  nap() {
+    this.isSleeping = true
+  }
+
+  wakeUp() {
+    this.isSleeping = false
   }
 }
 
