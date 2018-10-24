@@ -6,7 +6,12 @@ class AdaCat {
   }
 
   getDescription() {
-    return this.name + ' is a cat. they belong to ' + this.owner + '.'
+    var lines = [
+      this.name + ' is a cat. they belong to ' + this.owner + '.',
+      'their hunger level is ' + this.hunger + '/10.'
+    ]
+
+    return lines.join('\n')
   }
 
   feed() {

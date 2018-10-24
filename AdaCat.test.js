@@ -27,10 +27,18 @@ describe('AdaCat', function() {
   })
 
   describe('#getDescription', function() {
-    it('returns the name and owner in a nicely formatted string', function() {
+    it('includes the name and owner', function() {
       var myCat = new AdaCat('decking', 'alex')
       var result = myCat.getDescription()
-      expect(result).to.equal('decking is a cat. they belong to alex.')
+      var lines = result.split('\n')
+      expect(lines[0]).to.equal('decking is a cat. they belong to alex.')
+    })
+
+    it('includes the hunger level', function() {
+      var myCat = new AdaCat('socks', 'alex')
+      var result = myCat.getDescription()
+      var lines = result.split('\n')
+      expect(lines[1]).to.equal('their hunger level is 5/10.')
     })
   })
 
