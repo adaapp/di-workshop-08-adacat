@@ -4,6 +4,7 @@ class AdaCat {
     this.owner = owner
     this.hunger = 5
     this.isSleeping = false
+    this.size = 30
   }
 
   getDescription() {
@@ -19,6 +20,9 @@ class AdaCat {
     var hunger = this.hunger - 1
     if (hunger < 0) {
       hunger = 0
+    }
+    if (hunger < 3) {
+      this.size = this.size + 1
     }
     this.hunger = hunger
   }

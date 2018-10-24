@@ -29,6 +29,11 @@ describe('AdaCat', function() {
       var myCat = new AdaCat('denim', 'alex')
       expect(myCat.isSleeping).to.equal(false)
     })
+
+    it('sets the size attribute to 30', function() {
+      var myCat = new AdaCat('toyota', 'alex')
+      expect(myCat.size).to.equal(30)
+    })
   })
 
   describe('#getDescription', function() {
@@ -59,6 +64,13 @@ describe('AdaCat', function() {
       myCat.hunger = 0
       myCat.feed()
       expect(myCat.hunger).to.equal(0)
+    })
+
+    it('increases size when hunger is less than three', function() {
+      var myCat = new AdaCat('pencil', 'alex')
+      myCat.hunger = 2
+      myCat.feed()
+      expect(myCat.size).to.equal(31)
     })
   })
 
