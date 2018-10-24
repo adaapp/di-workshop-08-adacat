@@ -4,12 +4,14 @@
   "description": "A command-line cat pet thing!!",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '*.test.js'"
+    "test": "mocha '*.test.js'",
+    "start": "node index.js"
   },
   "author": "Alex Dytrych <alex@ada.ac.uk>",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "readline-sync": "^1.4.9"
   }
 }
