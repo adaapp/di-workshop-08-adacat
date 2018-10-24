@@ -7,6 +7,16 @@ class AdaCat {
     this.size = 30
   }
 
+  setHunger(newHunger) {
+    if (newHunger < 0) {
+      newHunger = 0
+    }
+    if (newHunger > 10) {
+      newHunger = 10
+    }
+    this.hunger = newHunger
+  }
+
   getDescription() {
     var lines = [
       this.name + ' is a cat. they belong to ' + this.owner + '.',
@@ -18,13 +28,12 @@ class AdaCat {
 
   feed() {
     var hunger = this.hunger - 1
-    if (hunger < 0) {
-      hunger = 0
-    }
+
     if (hunger < 3) {
       this.size = this.size + 1
     }
-    this.hunger = hunger
+
+    this.setHunger(hunger)
   }
 
   nap() {
@@ -33,6 +42,11 @@ class AdaCat {
 
   wakeUp() {
     this.isSleeping = false
+  }
+
+  play() {
+    var hunger = this.hunger + 3
+    this.setHunger(hunger)
   }
 }
 

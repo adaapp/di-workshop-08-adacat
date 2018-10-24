@@ -90,4 +90,19 @@ describe('AdaCat', function() {
       expect(myCat.isSleeping).to.equal(false)
     })
   })
+
+  describe('#play', function() {
+    it('increases hunger by 3', function() {
+      var myCat = new AdaCat('zebra', 'alex')
+      myCat.play()
+      expect(myCat.hunger).to.equal(8)
+    })
+
+    it('will not increase hunger above 10', function() {
+      var myCat = new AdaCat('jorts', 'alex')
+      myCat.hunger = 9
+      myCat.play()
+      expect(myCat.hunger).to.equal(10)
+    })
+  })
 })
