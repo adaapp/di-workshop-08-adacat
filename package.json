@@ -4,7 +4,7 @@
   "description": "A command-line cat pet thing!!",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '*.test.js'",
+    "test": "mocha *.test.js",
     "start": "node index.js"
   },
   "author": "Alex Dytrych <alex@ada.ac.uk>",
