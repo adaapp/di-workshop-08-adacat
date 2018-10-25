@@ -21,6 +21,10 @@ AdaCat.test.js.
 Complete the following tasks, using TDD throughout - writing unit tests first,
 then code, in a red/green/refactor cycle.
 
+1. Add a new attribute to AdaCat called `tiredness`. Feeding the cat increases
+   tiredness by 1. Playing with the cat increases tiredness by 3. Telling the
+   cat to nap resets tiredness to 0. Tiredness can be between 0 and 15. Include
+   tiredness in `getDescription`
 1. Add a new attribute to AdaCat called `message` that holds the cat’s status
    message. It starts off empty, but each time a method like feed or play gets
    called it gets updated. E.g. when play is called message is updated to “the
@@ -33,6 +37,11 @@ then code, in a red/green/refactor cycle.
    your cat to the vet”
 1. Extend the cat with more behaviours and statistics to make the game more
    interesting
+
+## Challenges:
+
+1. Copy the AdaCat class into a new P5 sketch. Can you provide a graphic
+   interface to AdaCat without modifying the class?
 1. Create a visual ASCII representation of key attributes like hunger, size and
    health - something like a little progress bar: `Health: [========= ] 90%`
 1. Allow the user to have more than one cat at once
