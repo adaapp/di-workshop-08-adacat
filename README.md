@@ -11,7 +11,7 @@ AdaCat.test.js.
 1. Clone this repo and `cd` into it
 1. Install dependencies: `npm install`
 1. Check that everything's working by running the tests: `npm test`
-1. Start the app: `npm start`
+1. Start the app: `node index.js`
    - Try feeding and playing with the cat!
    - Tell the cat to nap and wake up again!
    - Press 0 to quit
